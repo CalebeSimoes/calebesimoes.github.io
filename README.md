@@ -10,7 +10,7 @@ Depois de fazer o merge do pull request:
 
 1. Abra **Settings → Pages** neste repositório.
 2. Em **Build and deployment → Source**, escolha **Deploy from a branch**.
-3. Selecione a branch **`main`** e a pasta **`/docs`**. Clique em **Save**.
+3. Selecione a branch **`portfolio-publicacao`** e a pasta **`/docs`**. Clique em **Save**. Essa é a origem atualmente configurada neste repositório.
 4. Aguarde a execução de publicação e abra **Visit site**.
 
 O endereço será **https://calebesimoes.github.io/** após a primeira publicação bem-sucedida. Não há necessidade de contratar domínio ou usar Vercel para essa versão.
@@ -45,7 +45,7 @@ pnpm lint
 pnpm pages:prepare
 ```
 
-O último comando gera o build e atualiza `docs/`. Faça commit das alterações do código **e da pasta `docs/`**. Com Pages habilitado, as atualizações da branch `main` serão publicadas automaticamente.
+O último comando gera o build e atualiza `docs/`. Faça commit das alterações do código **e da pasta `docs/`**. Com Pages habilitado, as atualizações da branch `portfolio-publicacao` serão publicadas automaticamente. Uma alteração apenas na `main` precisa também ser incorporada à branch de publicação.
 
 `docs/` é uma pasta gerada e será substituída por `pages:prepare`. Edite o código-fonte e os arquivos de `public/` para manter as alterações nas próximas compilações.
 
@@ -69,4 +69,4 @@ O conteúdo foi preparado com o histórico fornecido pelo proprietário e a leit
 
 Imagens: capturas originais dos repositórios de [TODA](https://github.com/CalebeSimoes/TODA-CORPORATION/blob/main/assets/Capturar.PNG) e [Vendas](https://github.com/CalebeSimoes/PROJETO-ANALISE-DE-VENDAS/blob/main/PROJETOS/DASHBOARD/dashboard_vendas_completo.png). Fonte Space Grotesk sob SIL Open Font License, incluída em `public/fonts/OFL.txt`. Ícones funcionais: Lucide.
 
-Verificações realizadas: TypeScript, lint da aplicação, build, pré-renderização, referências locais, integridade do pacote e extração do PDF público. Não foram executados Lighthouse ou testes de interação em navegador.
+Verificações realizadas: TypeScript, lint da aplicação, build, pré-renderização, referências locais, integridade do pacote e extração do PDF público. A correção de responsividade foi conferida em navegador nas larguras 320, 390, 420, 421, 760, 761, 1024 e 1440 px: cards abaixo dos filtros, largura alinhada à seção e ausência de rolagem horizontal. Também foram conferidos os quatro filtros, seleção pelo teclado e abertura/fechamento dos detalhes. Não foi executado Lighthouse.
